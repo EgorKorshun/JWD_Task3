@@ -45,8 +45,6 @@ public class Runner {
             System.out.println("fibonacci numbers: "+Arrays.toString(SearchNumbers.getFibonacci(array)));
             System.out.println("prime numbers: "+Arrays.toString(SearchNumbers.getPrime(array)));
             System.out.println("three digit numbers: "+Arrays.toString(SearchNumbers.getDigitNumbers(array)));
-
-
         } catch (NullArrayException e) {
             e.printStackTrace();
         }
