@@ -5,7 +5,6 @@ import by.epamtc.korshun.task03.par1.exception.NullArrayException;
 
 public class MinMaxElement {
 
-
     public static int searchMin(Array array) throws  NullArrayException{
         if(array==null || array.getArray().length==0 )
             throw new  NullArrayException("array is null");

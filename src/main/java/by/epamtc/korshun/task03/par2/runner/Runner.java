@@ -35,7 +35,6 @@ public class Runner {
             }
             System.out.println(Arrays.deepToString(array));
 
-
         } catch (NullArrayException | ArraySizeException e) {
             System.err.println(e);
         }

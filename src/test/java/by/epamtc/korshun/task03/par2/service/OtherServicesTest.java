@@ -14,11 +14,14 @@ public class OtherServicesTest {
     public void fillingArrayTest() throws ArraySizeException {
         int dimension =-1234;
         fillingArray(dimension);
-
     }
 
 
     @Test
-    public void printArray() {
+    public void fillingArrayTestLengthWithZero() throws ArraySizeException {
+        int dimension= 0;
+        int  expected = 0;
+        int  actual  = fillingArray(dimension).length;
+        Assert.assertEquals(expected,actual);
     }
 }

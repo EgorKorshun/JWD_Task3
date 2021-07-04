@@ -26,5 +26,4 @@ public class MinElement implements Comparator<int[] > {
         }
         return min;
     }
-
 }

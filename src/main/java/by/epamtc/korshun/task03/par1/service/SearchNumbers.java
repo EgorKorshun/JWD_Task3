@@ -14,7 +14,6 @@ public class SearchNumbers {
         return newArray;
     }
 
-
     public static boolean isPrime(int number) {
         if (number < 2) {
             return false;
@@ -67,8 +66,6 @@ public class SearchNumbers {
         }
         return new int[0];
     }
-
-
 
     public static int[] getFibonacci(Array array) throws NullArrayException {
         int [] arrayOfNumbers = checkArr(array);

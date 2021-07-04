@@ -1,22 +1,23 @@
 package by.epamtc.korshun.task03.par1.service;
 
 import by.epamtc.korshun.task03.par1.entity.Array;
-import by.epamtc.korshun.task03.par1.exception.ArraySizeException;
 import by.epamtc.korshun.task03.par1.exception.NullArrayException;
-
-import java.util.Arrays;
 
 public class Sort {
     public static  void selectSort(Array arrayOfInt) throws  NullArrayException{
         if(arrayOfInt==null||arrayOfInt.getArray().length==0)
             throw  new NullArrayException("array is null");
         int[] array = arrayOfInt.getArray();
+        selectSortArrOfInt(array);
+    }
 
-        for (int i = 0; i < array.length; i++) {
-            int minIndex = min(array, i, array.length);
-            int tmp = array[i];
-            array[i] = array[minIndex];
-            array[minIndex] = tmp;
+
+    public static void selectSortArrOfInt(int[] arrayOfInt) throws NullArrayException {
+        for (int i = 0; i < arrayOfInt.length; i++) {
+            int minIndex = min(arrayOfInt, i, arrayOfInt.length);
+            int tmp = arrayOfInt[i];
+            arrayOfInt[i] = arrayOfInt[minIndex];
+            arrayOfInt[minIndex] = tmp;
         }
     }
 

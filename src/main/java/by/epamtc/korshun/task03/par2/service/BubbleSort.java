@@ -28,9 +28,7 @@ public class BubbleSort {
         MaxElement maxElements = new MaxElement();
         bubbleSort(arrayForTest,maxElements,true);
         System.out.println(Arrays.deepToString(arrayForTest));
-
     }
-
 
     private static void swap(int[][] array, int line1, int line2) {
         int[] temp = array[line1];

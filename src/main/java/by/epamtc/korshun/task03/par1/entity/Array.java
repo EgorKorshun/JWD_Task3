@@ -4,7 +4,6 @@ import by.epamtc.korshun.task03.par1.exception.ArraySizeException;
 
 import java.util.Arrays;
 
-
 public class Array {
     private static final int MIN_SIZE = 0;
     private int[] arrayOfInt;
@@ -66,11 +65,11 @@ public class Array {
 
     @Override
     public String toString() {
-
+        System.out.print("[");
         for (int i = 0; i < arrayOfInt.length; i++) {
-            System.out.println(arrayOfInt[i]);
+            System.out.print(arrayOfInt[i]+" ");
         }
-        System.out.println();
+        System.out.println("]");
 
         return " arrayOfInt of "+ getClass().getSimpleName();
     }
