@@ -23,13 +23,6 @@ public class BubbleSort {
         }
     }
 
-    public static void main(String[] args) throws NullArrayException, ArraySizeException {
-        int [][] arrayForTest = {{1},{123,12},{23,3,},{1}};
-        MaxElement maxElements = new MaxElement();
-        bubbleSort(arrayForTest,maxElements,true);
-        System.out.println(Arrays.deepToString(arrayForTest));
-    }
-
     private static void swap(int[][] array, int line1, int line2) {
         int[] temp = array[line1];
         array[line1] = array[line2];

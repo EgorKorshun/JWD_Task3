@@ -41,26 +41,33 @@ public class Sort {
     }
 
 
-    public  static void bubbleSort(Array arrayOfInt) throws  NullArrayException{
-        if(arrayOfInt==null)
-            throw  new NullArrayException("array is null");
-        int [] array = arrayOfInt.getArray();
+    public  static void bubbleSort(Array array) throws  NullArrayException{
+        if(array ==null||array.getArray().length==0){
+            throw  new NullArrayException("array is null");}
+        int [] arrayOfInt = array.getArray();
+        bubbleSortForArrOfInt(arrayOfInt);
+
+    }
+
+    public  static  void bubbleSortForArrOfInt(int[] arrayOfInt){
         boolean sorted = false;
         while (!sorted) {
             sorted = true;
-            for (int i = 1; i < array.length; i++) {
-                if (array[i - 1] > array[i]) {
-                    swap(array, i - 1, i);
+            for (int i = 1; i < arrayOfInt.length; i++) {
+                if (arrayOfInt[i - 1] > arrayOfInt[i]) {
+                    swap(arrayOfInt, i - 1, i);
                     sorted = false;
                 }
             }
         }
     }
-
     public static void insertionSort(Array arrayOfInt) throws NullArrayException {
-        if (arrayOfInt == null)
-            throw new NullArrayException("array is null");
+        if (arrayOfInt == null||arrayOfInt.getArray().length==0){
+            throw new NullArrayException("array is null");}
         int[] array = arrayOfInt.getArray();
+        insertionSortForArrOFInt(array);
+    }
+    public  static  void  insertionSortForArrOFInt(int[] array){
         for (int left = 0; left < array.length; left++) {
             int value = array[left];
             int i = left - 1;
